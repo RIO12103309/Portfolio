@@ -2,12 +2,12 @@
 
 /* グローバル変数設定 */
 :root {
-  --bg-color: #edecf3;      /* 全体の背景色 */
-  --card-bg: #ffffff;       /* カードやパネルの背景色 */
-  --text-main: #222222;     /* メイン文字色 */
-  --text-sub: #a78bfa;      /* サブ文字色 */
-  --accent-color: #e879f9;  /* アクセントカラー */
-  --border-color: #3b2d54;  /* 枠線・区切り線の色 */
+ --bg-color: #f0f4f8;      /* 全体の背景色（爽やかな淡いブルーグレー） */
+  --card-bg: #ffffff;       /* カードやパネルの背景色（白） */
+  --text-main: #1e293b;     /* メイン文字色（深いネイビーブラック） */
+  --text-sub: #3b82f6;      /* サブ文字色（鮮やかなブルー） */
+  --accent-color: #0284c7;  /* アクセントカラー（シアン・スカイブルー） */
+  --border-color: #cbd5e1;  /* 枠線・区切り線の色（落ち着いたソフトブルー） */
   --max-width: 960px;         /* 画面の最大横幅 */
 }
 
@@ -83,10 +83,18 @@ html {
   margin-bottom: 10px;
 }
 
+
+/* 元のスタイルの調整 */
+.hero-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 5px; /* 下の間隔を少し詰める */
+}
+
 .hero-bio {
   color: var(--text-main);
-  max-width: 600px;
-  margin-bottom: 25px;
+  /* flexコンテナ内なのでmax-widthは不要 */
+  /* max-width: 600px; */
+  margin-bottom: 0; /* 下の間隔をなくす（gapで調整） */
 }
 
 /* ボタン */
@@ -118,7 +126,47 @@ html {
   font-size: 1.6rem;
   margin-bottom: 30px;
 }
+/* ==========================================
+   ヒーローエリアのプロフィール（写真とテキストの横並び）
+   ========================================== */
+.hero-profile-flex {
+  display: flex;
+  align-items: center; /* 垂直方向中央揃え */
+  gap: 40px; /* 写真とテキストの間隔 */
+  margin-bottom: 40px; /* 下の開閉エリアとの間隔 */
+}
 
+/* 画像エリア */
+.hero-photo {
+  flex-shrink: 0; /* 画像が縮まないようにする */
+}
+
+.profile-image {
+  width: 150px; /* 画像の幅 */
+  height: 150px; /* 画像の高さ（正方形にする） */
+  border-radius: 50%; /* 円形にする */
+  object-fit: cover; /* 画像を枠内に収める */
+  border: 4px solid var(--card-bg); /* 白い枠線 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 軽い影 */
+}
+
+/* テキストエリア */
+.hero-text {
+  flex-grow: 1; /* 残りの幅を占める */
+}
+
+/* レスポンシブ対応（タブレット・スマホ） */
+@media (max-width: 768px) {
+  .hero-profile-flex {
+    flex-direction: column; /* 縦並びにする */
+    text-align: center; /* テキストを中央揃えにする */
+    gap: 20px; /* 間隔を狭める */
+  }
+
+  .hero-bio br {
+    display: none; /* 改行を解除する */
+  }
+}
 /* ==========================================
    プロフィール開閉（アコーディオン）スタイル
    ========================================== */
