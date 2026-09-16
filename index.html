@@ -101,6 +101,28 @@
       <p>&copy; 2026 []. All Rights Reserved.</p>
     </div>
   </footer>
+<!-- JavaScriptで開閉の動きを制御 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const openBtn = document.getElementById('openProfileBtn');
+      const closeBtn = document.getElementById('closeProfileBtn');
+      const content = document.getElementById('profileContent');
 
+      // 「自己紹介を見る」ボタンを押したとき
+      openBtn.addEventListener('click', () => {
+        content.classList.add('is-open');
+        openBtn.style.display = 'none'; // 開くボタンを隠す
+      });
+
+      // 一番下の「閉じる」ボタンを押したとき
+      closeBtn.addEventListener('click', () => {
+        content.classList.remove('is-open');
+        openBtn.style.display = 'inline-block'; // 開くボタンを再表示
+
+        // スムーズにプロフィール上部まで戻す
+        document.getElementById('profile').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>
