@@ -142,8 +142,8 @@ html {
 }
 
 .profile-image {
-  width: 150px; /* 画像の幅 */
-  height: 150px; /* 画像の高さ（正方形にする） */
+  width: 200px; /* 画像の幅 */
+  height: 200px; /* 画像の高さ（正方形にする） */
   border-radius: 50%; /* 円形にする */
   object-fit: cover; /* 画像を枠内に収める */
   border: 4px solid var(--card-bg); /* 白い枠線 */
@@ -153,6 +153,7 @@ html {
 /* テキストエリア */
 .hero-text {
   flex-grow: 1; /* 残りの幅を占める */
+   text-align: center; /* テキストを中央揃えにする */
 }
 
 /* レスポンシブ対応（タブレット・スマホ） */
