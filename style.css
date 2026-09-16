@@ -119,6 +119,97 @@ html {
   margin-bottom: 30px;
 }
 
+/* ==========================================
+   プロフィール開閉（アコーディオン）スタイル
+   ========================================== */
+.profile-toggle-wrapper {
+  margin-top: 20px;
+}
+
+/* 開くボタン */
+.toggle-open-btn {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-open-btn:hover {
+  background-color: #555;
+  border-color: #888;
+}
+
+/* 開閉コンテンツ本体（初期状態は非表示） */
+.profile-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  margin-top: 0;
+}
+
+/* 開いたときのスタイル */
+.profile-content.is-open {
+  max-height: 800px; /* 中身が入る十分な高さ */
+  opacity: 1;
+  margin-top: 20px;
+}
+
+/* 中身の枠組みデザイン */
+.profile-inner {
+  background: rgba(255, 255, 255, 0.05); /* うっすら背景をつける */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.profile-inner h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #555;
+  padding-bottom: 6px;
+}
+
+.skills-box {
+  margin-top: 16px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.skills-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+
+/* 一番下の閉じるボタン */
+.toggle-close-btn {
+  display: block;
+  margin: 24px auto 0;
+  background-color: transparent;
+  color: #ccc;
+  border: 1px solid #777;
+  padding: 6px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.toggle-close-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+
 /* 作品カードグリッド */
 .works-grid {
   display: grid;

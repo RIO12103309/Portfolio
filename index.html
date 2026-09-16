@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PORTFOLIO | [学生の名前]</title>
+  <title>PORTFOLIO | []</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,10 +22,39 @@
   <section id="profile" class="hero-section">
     <div class="container">
       <p class="sub-title">Game Programmer Portfolio</p>
-      <h2>[学生の名前]</h2>
-      <p class="hero-bio">（サンプルコメント）国際電子ビジネス専門学校でゲームプログラミングを専攻<br>しています。C++を使った開発が得意です。</p>
+      <h2>[]</h2>
+      <p class="hero-bio">国際電子ビジネス専門学校でゲームプログラミングを専攻<br>しています。</p>
     </div>
   </section>
+<div class="profile-toggle-wrapper">
+        <!-- 開くボタン -->
+        <button type="button" id="openProfileBtn" class="toggle-open-btn">
+          自己紹介を見る <span class="arrow">▼</span>
+        </button>
+<!-- 開くコンテンツ本体 -->
+        <div id="profileContent" class="profile-content">
+          <div class="profile-inner">
+            <h3>自己紹介・PR</h3>
+            <p>
+              C言語やC++を用いた2D/3Dゲーム開発を中心に学んでいます。<br>
+              ゲームの面白さを支える「手触りの良さ」や「仕様変更に強い柔軟な設計」を意識して日々制作に取り組んでいます。
+            </p>
+            
+            <div class="skills-box">
+              <h4>スキル・使用環境</h4>
+              <ul>
+                <li><strong>言語：</strong> C言語 / C++ / C#</li>
+                <li><strong>ツール：</strong> Visual Studio / Unity / Git</li>
+              </ul>
+            </div>
+
+            <!-- 一番下の閉じるボタン -->
+            <button type="button" id="closeProfileBtn" class="toggle-close-btn">
+              閉じる ▲
+            </button>
+          </div>
+        </div>
+      </div>
 
   <!-- 作品一覧（各作品の個別ページへ飛ばす） -->
   <section id="works" class="section">
@@ -39,9 +68,10 @@
             <img src="ossan/images/worrk2_01/Ossan1.png" alt="作品1サムネイル">
           </div>
           <div class="works-body">
-            <span class="tag">（サンプル）C++ / 自作エンジン</span>
-            <h3>（サンプル）3Dハイスピードアクション<br>『タイトル』</h3>
-            <p>（サンプル）自作エンジンによる衝突判定の高速化とキャラクター制御を実装。</p>
+            <span class="tag">C++ / VisualStudio</span>
+            <h3>２年次作成<br>クレーンゲームシミュレーション<br>
+『頭上の秘宝!! つかめ! カツラキャッチャー!』</h3>
+            <p>5回クレーンを動かして、獲得したカツラの合計点数をより高くすることをめざすゲームです。<br>カツラの種類によって点数が違うので様々なカツラを取りより高い点数のカツラを見つけるのがカギです。</p>
             <a href="ossan/site/work2_01.html" class="btn-link">作品の詳細を見る &rarr;</a>
           </div>
         </article>
@@ -52,9 +82,11 @@
             <img src="photography/images/title.png" alt="作品2サムネイル">
           </div>
           <div class="works-body">
-            <span class="tag">（サンプル）Unity / C#</span>
-            <h3>（サンプル）協力プレイ対応パズル<br>『タイトル』</h3>
-            <p>（サンプル）チーム開発でのメインプログラム、状態管理（StatePattern）を担当。</p>
+            <span class="tag">C言語 / VisualStudio</span>
+            <h3>３年次作成<br>2D横スクロールパズルアクションゲーム
+<br>『PHOTOGRAPHY』</h3>
+            <p>窓を操作し、触れれない足場を実体化して３つの欠片を拾いゴールを目指すゲームです。<br>窓をブロックにかざしシャッターを切ることでブロックが実体化しその上を歩くことができます<br>
+                うまく窓を活用してかけらを探し出しゴールを目指そう</p>
 
             <a href="photography/site/work2_01.html" class="btn-link">作品の詳細を見る &rarr;</a>
           </div>
@@ -66,7 +98,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 [学生の名前]. All Rights Reserved.</p>
+      <p>&copy; 2026 []. All Rights Reserved.</p>
     </div>
   </footer>
 
