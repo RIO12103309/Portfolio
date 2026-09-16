@@ -24,14 +24,15 @@
       <p class="sub-title">Game Programmer Portfolio</p>
       <h2>[]</h2>
       <p class="hero-bio">国際電子ビジネス専門学校でゲームプログラミングを専攻<br>しています。</p>
-    </div>
-  </section>
-<div class="profile-toggle-wrapper">
+
+      <!-- ▼ プロフィール開閉エリア（セクション内に正しく配置） ▼ -->
+      <div class="profile-toggle-wrapper">
         <!-- 開くボタン -->
         <button type="button" id="openProfileBtn" class="toggle-open-btn">
           自己紹介を見る <span class="arrow">▼</span>
         </button>
-<!-- 開くコンテンツ本体 -->
+
+        <!-- 開くコンテンツ本体（初期状態は非表示） -->
         <div id="profileContent" class="profile-content">
           <div class="profile-inner">
             <h3>自己紹介・PR</h3>
@@ -55,6 +56,10 @@
           </div>
         </div>
       </div>
+      <!-- ▲ ここまで ▲ -->
+
+    </div>
+  </section>
 
   <!-- 作品一覧（各作品の個別ページへ飛ばす） -->
   <section id="works" class="section">
@@ -101,7 +106,8 @@
       <p>&copy; 2026 []. All Rights Reserved.</p>
     </div>
   </footer>
-<!-- JavaScriptで開閉の動きを制御 -->
+
+  <!-- JavaScriptで開閉の動きを制御 -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const openBtn = document.getElementById('openProfileBtn');
